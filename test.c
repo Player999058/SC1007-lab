@@ -117,15 +117,14 @@ int Hash(int key,int hSize)
 ListNode* HashSearch(HashTable Q3Hash, int key)
 {
     //write your code here
-    ListNode *temp;
     int keys = Hash(key, Q3Hash.hSize);
     //iterate through the hashtable key link list to find the node :D
-    for(ListNode *i = Q3Hash.Table[keys].head; i && i->key != key; i = i->next){
-        temp = i->next;
-        if (!temp) return NULL;
+    ListNode *i = Q3Hash.Table[keys].head;
+    for(; i && i->key != key; i = i->next){ 
+    
     }
 
-    return temp;
+    return i;
 
 }
 
