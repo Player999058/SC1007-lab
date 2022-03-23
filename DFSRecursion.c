@@ -66,7 +66,7 @@ int main()
 void DFS_R(Graph g, int v)
 {
     // Write your code here
-
+    // if you want base case do noMoreNeighbours = 0
     //base case
     int i = v-1;
     printf("%d ", v);
@@ -77,6 +77,8 @@ void DFS_R(Graph g, int v)
             DFS_R(g, j+1);
         }
     }
+
+    //if(noMoreNeighbours == 0) return;
 
 }
 
