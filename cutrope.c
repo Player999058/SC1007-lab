@@ -24,6 +24,10 @@ int cr_top_down_dp(int *p, int n)
     //write your code here
     int q = -999999999;
     if(n==0) return 0;
+
+    if(r[n] > 0) return r[n];
+
+    
     else{
         for ( int i =1 ; i <= n; i++){
             if(q < p[i] + cr_recursive(p,n-i))
